@@ -50,10 +50,6 @@ toolchain {
 
   # Make C++ compilation deterministic. Use linkstamping instead of these
   # compiler symbols.
-  unfiltered_cxx_flag: "-Wno-builtin-macro-redefined"
-  unfiltered_cxx_flag: "-D__DATE__=\"redacted\""
-  unfiltered_cxx_flag: "-D__TIMESTAMP__=\"redacted\""
-  unfiltered_cxx_flag: "-D__TIME__=\"redacted\""
 
   objcopy_embed_flag: "-I"
   objcopy_embed_flag: "binary"

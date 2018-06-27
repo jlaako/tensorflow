@@ -570,11 +570,11 @@ def tf_workspace(path_prefix="", tf_repo_name=""):
   tf_http_archive(
       name = "aws",
       urls = [
-          "https://mirror.bazel.build/github.com/aws/aws-sdk-cpp/archive/1.3.15.tar.gz",
-          "https://github.com/aws/aws-sdk-cpp/archive/1.3.15.tar.gz",
+          "https://mirror.bazel.build/github.com/aws/aws-sdk-cpp/archive/1.4.40.tar.gz",
+          "https://github.com/aws/aws-sdk-cpp/archive/1.4.40.tar.gz",
       ],
-      sha256 = "b888d8ce5fc10254c3dd6c9020c7764dd53cf39cf011249d0b4deda895de1b7c",
-      strip_prefix = "aws-sdk-cpp-1.3.15",
+      sha256 = "bcb510eb9c9c61b0a417246537e48175f64fac92c12408d13390a8922c4ae7a1",
+      strip_prefix = "aws-sdk-cpp-1.4.40",
       build_file = clean_dep("//third_party:aws.BUILD"),
   )
 

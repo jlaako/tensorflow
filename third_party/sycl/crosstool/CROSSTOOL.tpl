@@ -71,10 +71,6 @@ toolchain {
 
   # Make C++ compilation deterministic. Use linkstamping instead of these
   # compiler symbols.
-  unfiltered_cxx_flag: "-Wno-builtin-macro-redefined"
-  unfiltered_cxx_flag: "-D__DATE__=\"redacted\""
-  unfiltered_cxx_flag: "-D__TIMESTAMP__=\"redacted\""
-  unfiltered_cxx_flag: "-D__TIME__=\"redacted\""
 
   compiler_flag: "-fPIE"
 
@@ -182,10 +178,6 @@ toolchain {
 
   # Make C++ compilation deterministic. Use linkstamping instead of these
   # compiler symbols.
-  unfiltered_cxx_flag: "-Wno-builtin-macro-redefined"
-  unfiltered_cxx_flag: "-D__DATE__=\"redacted\""
-  unfiltered_cxx_flag: "-D__TIMESTAMP__=\"redacted\""
-  unfiltered_cxx_flag: "-D__TIME__=\"redacted\""
 
   # All warnings are enabled. Maybe enable -Werror as well?
   compiler_flag: "-Wall"

@@ -23,12 +23,12 @@ limitations under the License.
 #include "tensorflow/core/framework/op_kernel.h"
 #include "tensorflow/core/framework/types.pb.h"
 #include "tensorflow/core/platform/mutex.h"
+#include "tensorflow/stream_executor/stream.h"
 
 #define EIGEN_USE_THREADS
 
 #if GOOGLE_CUDA
 #include <cuda_runtime.h>
-#include "tensorflow/stream_executor/stream.h"
 #endif
 
 #include "tensorflow/stream_executor/lib/statusor.h"

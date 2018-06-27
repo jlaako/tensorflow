@@ -21,6 +21,7 @@ limitations under the License.
 #include <map>
 #include <string>
 #include <vector>
+#include <iostream>
 
 #include "tensorflow/core/platform/logging.h"
 #include "tensorflow/core/lib/strings/str_util.h"

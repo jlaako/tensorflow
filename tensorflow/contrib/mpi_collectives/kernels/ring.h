@@ -59,13 +59,18 @@ DataType TensorFlowDataType();
 // This uses a custom CUDA stream on GPU, which is necessary to overlay the
 // backpropagation computations with the allreduce.
 template <typename Device>
-void CopyTensorData(void* destination, void* source, size_t size);
+void CopyTensorData(void* destination, void* source, size_t size)
+{ std::memcpy(destination, source, size); }
 
 // Add a tensor into another tensor, accumulating in place.
 // This uses a custom CUDA stream on GPU, which is necessary to overlay the
 // backpropagation computations with the allreduce.
 template <typename Device, typename T>
-void AccumulateTensorData(T* destination, T* source, size_t size);
+void AccumulateTensorData(T* destination, T* source, size_t size)
+{
+  for (unsigned int i = 0; i < size; i++)
+    destination[i] += source[i];
+}
 
 // We need to get the right stream for doing CUDA memory transfers and
 // operations, which is possibly different from the standard TensorFlow stream.

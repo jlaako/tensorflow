@@ -112,7 +112,7 @@ for arch in $archs; do
                                           -I../../platform/c++11.futex \
                                           -I../../platform/c++11 -I../../platform/gcc \
                                           -I../../platform/posix -pthread
-                        PLATFORM_CFLAGS=-std=c++11 -Werror -Wall -Wextra -pedantic
+                        PLATFORM_CFLAGS=-std=c++11 -pedantic
                         PLATFORM_LDFLAGS=-pthread
                         MKDEP=${CC} -M -std=c++11
                         PLATFORM_C=../../platform/linux/src/nsync_semaphore_futex.c \
@@ -146,7 +146,7 @@ for arch in $archs; do
                                           -I../../platform/macos -I../../platform/posix -pthread
                         PLATFORM_CFLAGS=-arch '"$arch"' -fno-exceptions -stdlib=libc++ \
                                         -fembed-bitcode '"$arch_flags"' -fPIC -x c++ \
-                                        -std=c++11 -Werror -Wall -Wextra -pedantic
+                                        -std=c++11 -pedantic
                         PLATFORM_LDFLAGS=-pthread
                         MKDEP=${CC} -x c++ -M -std=c++11
                         PLATFORM_C=../../platform/posix/src/clock_gettime.c \
@@ -168,7 +168,7 @@ for arch in $archs; do
                         PLATFORM_CPPFLAGS=-DNSYNC_USE_CPP11_TIMEPOINT -DNSYNC_ATOMIC_CPP11 \
                                           -I../../platform/c++11 -I../../platform/gcc \
                                           -I../../platform/macos -I../../platform/posix -pthread
-                        PLATFORM_CFLAGS=-x c++ -std=c++11 -Werror -Wall -Wextra -pedantic
+                        PLATFORM_CFLAGS=-x c++ -std=c++11 -pedantic
                         PLATFORM_LDFLAGS=-pthread
                         MKDEP=${CC} -x c++ -M -std=c++11
                         PLATFORM_C=../../platform/posix/src/clock_gettime.c \

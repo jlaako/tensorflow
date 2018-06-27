@@ -68,7 +68,6 @@ genrule(
     cmd = "sed -e s/@PCRE_MAJOR@/8/" +
           "    -e s/@PCRE_MINOR@/39/" +
           "    -e s/@PCRE_PRERELEASE@//" +
-          "    -e s/@PCRE_DATE@/redacted/" +
           "    $< >$@",
 )
 

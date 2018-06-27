@@ -68,10 +68,6 @@ toolchain {
       flag_group {
         # Make C++ compilation deterministic. Use linkstamping instead of these
         # compiler symbols.
-        flag: "-Wno-builtin-macro-redefined"
-        flag: "-D__DATE__=\"redacted\""
-        flag: "-D__TIMESTAMP__=\"redacted\""
-        flag: "-D__TIME__=\"redacted\""
       }
     }
   }

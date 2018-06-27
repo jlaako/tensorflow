@@ -59,6 +59,9 @@ cc_library(
             "PLATFORM_LINUX",
             "ENABLE_CURL_CLIENT",
             "ENABLE_NO_ENCRYPTION",
+            "AWS_SDK_VERSION_MAJOR=1",
+            "AWS_SDK_VERSION_MINOR=4",
+            "AWS_SDK_VERSION_PATCH=40"
         ],
         "@org_tensorflow//tensorflow:darwin": [
             "PLATFORM_APPLE",
